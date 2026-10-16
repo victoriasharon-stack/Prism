@@ -61,9 +61,45 @@
                         Tap a piece to turn it 15 degrees. Drag around a piece to turn it freely. Keys:
                         <kbd>Space</kbd> next piece, <kbd>←</kbd> <kbd>→</kbd> turn, <kbd>Shift</kbd> for 1 degree.
                     </p>
-                </div>
-                </div>
-            </section>
-        </main>
+
+                    <section class="notes" aria-label="How the light works">
+                        <h2>Field notes on the light</h2>
+                        <div class="grid">
+                            <div>
+                                <h3>Mirrors</h3>
+                                <p>A ray leaves at the angle it arrived, mirrored across the surface normal.</p>
+                                <span class="eq">0 out = 0 in</span>
+                            </div>
+                            <div>
+                                <h3>Prisms</h3>
+                                <p> 
+                                    Each face bends light by Snell's law. A ray inside that meets a face too steeply reflects instead.
+                                </p>
+                                <span class="eq">n₁ sin θ₁ = n₂ sin θ₂</span>
+                            </div>
+                            <div>
+                                <h3>Colour</h3>
+                                <p>
+                                    This glass has index 1.42 for red up to 1.68 for blue, so white light fans into five bands. Real flint glass spreads far less.
+                                </p>
+                                <span class="eq">n 1.42 right arrow 1.68</span>
+                            </div>
+                            <div>
+                                <h3>Lenses</h3>
+                                <p>
+                                    A thin lens tips a ray toward its axis by its height over the focal length, so a fan can meet again as white.
+                                </p>
+                                <span class="eq">triangle's slope = -h / f</span>
+                            </div>
+                </section>
+            </main>
+
+            
+            <script src="js/engine.js"></script>
+            <script src="js/levels.js"></script>
+            <script src="js/paper.js"></script>
+            <script src="js/logo.js"></script>
+            <script src="js/game.js"></script>
     </body>
 </html>
+                
