@@ -1,0 +1,57 @@
+/* Layout: one narrow zine column. Poster logo on bare paper, then the board as a single inked block, then the field nptes. */
+:root {
+    --paper: #ece6da; /* warm off-white stock */
+    --ink: #141312; /* black ink */
+    --char: #272523; /* charcoal black */
+    --grey1: #8c8880; /* soft grey */
+    --grey2: #c6c0b5; /* light soft grey */
+    --f-pixel: 'Silkscreen', 'Courier New', monospace;
+    --f-body: 'Courier Prime', 'Courier New', Courier, monospace;
+    --s-1: 11px;
+    --s0: 15px;
+    --s1: 18px;
+    --s2: 24px;
+    color-scheme: light;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,
+body {
+    min-height: 100%;
+}
+[hidden] {
+    display: none !important;
+}
+img {
+    max-width: 100%;
+}
+body {
+    margin: 0;
+    background-color: var(--paper);
+    background-image: radial-gradient(
+        38% 30% at 18% 12%
+        rgb(140 136 128 / 0.1),
+        transparent 70%
+    ),
+    radial-gradient(30% 26% at 86% 40%, rgb(140 136 128 / 0.08), transparent 70%),
+    radial-gradient(44% 34% at 30% 78%, rgb(198 192 181 / 0.3), transparent 70%),
+    radial-gradient(26% 20% at 74% 92%, rgb(140 136 128 / 0.07), transparent 70%);
+color: var(--ink);
+font-family: var(--f-body);
+font-size: var(--s0);
+line-height: 1.5;
+padding-left: max(16px, env(safe-area-inset-left, 0px));
+padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::after {
+    content: '',
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    background-image: var(--grain, none);
+    
+}
