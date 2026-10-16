@@ -287,3 +287,47 @@ button:focus-visible {
     border-radius: 2px;
     color: var(--ink);
 }
+
+/* --- field notes --- */
+.notes {
+    border-top: 3px solid var(--ink);
+    padding-top: 18px;
+    display: grid;
+    gap: 14px;
+}
+.notes h2 {
+    margin: 0;
+    font-family: var(--f-pixel);
+    font-size: var(--s-1);
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+.grid div {
+    min-width: 0;
+}
+.grid h3 {
+    margin: 0 0 4px;
+    font-size: var(--s0);
+}
+.grid p {
+    margin: 0;
+    font-size: 14px;
+}
+.eq {
+    font-family: var(--f-pixel);
+    font-size: 11px;
+    display: inline-block;
+    margin-top: 6px;
+    border: 1.5px solid var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stamp:not([hidden]) .mark {
+        animation: none;
+    }
+}
