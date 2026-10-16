@@ -86,3 +86,66 @@ gap: 28px;
     transform: translate(-6%) rotate(-0.6deg);
 
 }
+
+/* --- game --- */
+
+.game {
+    display: flex;
+    gap: 12px;
+}
+.hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px 20px;
+}
+.hud .meta {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+.eyebrow {
+    font-family: var(--f-pixel);
+    font-size: var(--s-1);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey1);
+
+}
+.eyebrow b {
+    color: var(--ink);
+    font-weight: 400;
+}
+h1 {
+    margin: 0;
+    font-family: var(--f-body);
+    font-weight: 700;
+    font-size: var(--s2);
+    line-height: 1.1;
+    text-wrap: balance;
+}
+.levels {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.levels button {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    font: 700 var (--s-1) var(--f-pixel);
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px 3px 2px 4px;
+    cursor: pointer;
+    font-variant-numeric: tabular-nums;
+}
+.levels button.done {
+    background: var(--ink);
+    color: var(--paper);
+}
+.levels button[aria-current='true'] {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
