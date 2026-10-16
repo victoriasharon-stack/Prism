@@ -212,3 +212,65 @@ h1 {
         opacity: 1;
     }
 }
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    gap: 12px 20px; 
+}
+#hint {
+    margin: 0;
+    max-width: 52ch;
+    min-width: 0;
+    flex: 1 1 280px;
+}
+.ctrl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.count {
+    font-family: var(--f-pixel);
+    font-size: var(--s-1);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+    margin-right: 6px;
+}
+.btn {
+    font: 7oo var(--s-1) var(--f-pixel);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 9px 14px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: 3px 2px 3px 4px;
+    cursor: pointer;
+}
+.btn.solid {
+    background: var(--ink);
+    color: var(--paper);
+}
+.btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+.btn.solid:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+button:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+}
+.btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+.btn:disabled:hover {
+    background: var(--paper);
+    color: var(--ink);
+}
