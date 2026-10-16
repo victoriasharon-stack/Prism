@@ -26,6 +26,44 @@
                 ></canvas>
                 <p class="tag">A light-bending puzzle with ray-traced mirrors, lenses and prisms.</p>
             </header>
+            <section class="game" aria-label="Puzzle">
+                <div class="hud">
+                    <div class="meta">
+                        <span class="eyebrow"
+                            >Level <b id="lvnum">01</b> / <span id="lvtot">06</span> &nbsp; .&nbsp; Rings lit
+                            <b id="litc">0/1</b></span>
+                        >
+                        <h1 id="lvname">First light</h1>
+                    </div>
+                    <nav class="levels" id="levels" aria-label="Choose level"></nav>
+                </div>
+
+
+                <div class="board-wrap">
+                    <canvas
+                        id="board"
+                        tabindex="0"
+                        aria-label="Puzzle board. Tap or drag pieces to turn them. Space and arrrow keys also work."
+                    ></canvas>
+                    <div class="stamp" id="stamp" hidden>
+                    <div class="mark">CLEAR</div>
+                    <div class="sub" id="stampsub">3 turns</div>
+                </div>
+
+                <div class="foot">
+                    <p id="hint">Tap the mirror to turn it.</p>
+                    <div class="ctrl">
+                        <span class="count" id="turns">Turns 0</span>
+                        <button class="btn" id="reset" type="button">Reset</button>
+                        <button class="btn solid" id="next" type="button">/Next</button>
+                    </div>
+                    <p class="keys">
+                        Tap a piece to turn it 15 degrees. Drag around a piece to turn it freely. Keys:
+                        <kbd>Space</kbd> next piece, <kbd>←</kbd> <kbd>→</kbd> turn, <kbd>Shift</kbd> for 1 degree.
+                    </p>
+                </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
