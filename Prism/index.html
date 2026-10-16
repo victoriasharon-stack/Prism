@@ -1,105 +1,32 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset=""utf-8 />
-        <meta name="viewport" content="width=device-width, intial-scale=1, viewport-fit=cover" />
-        <title>Prism</title>
-        <meta
-           name="description"
-            content="A light-bending puzzle with ray-traced mirrors, lenses and prisms."
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700@display=swap"
-        />
-        <link re="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <main class="sheet">
-            <header class="poster">
-                <canvas
-                    id="logo"
-                    role="img"
-                    aria-label="PRISM logo. A white beam hits the I, a glass prism, and fans into a spectrum of colors."
-                ></canvas>
-                <p class="tag">A light-bending puzzle with ray-traced mirrors, lenses and prisms.</p>
-            </header>
-            <section class="game" aria-label="Puzzle">
-                <div class="hud">
-                    <div class="meta">
-                        <span class="eyebrow"
-                            >Level <b id="lvnum">01</b> / <span id="lvtot">06</span> &nbsp; .&nbsp; Rings lit
-                            <b id="litc">0/1</b></span>
-                        >
-                        <h1 id="lvname">First light</h1>
-                    </div>
-                    <nav class="levels" id="levels" aria-label="Choose level"></nav>
-                </div>
-
-
-                <div class="board-wrap">
-                    <canvas
-                        id="board"
-                        tabindex="0"
-                        aria-label="Puzzle board. Tap or drag pieces to turn them. Space and arrrow keys also work."
-                    ></canvas>
-                    <div class="stamp" id="stamp" hidden>
-                    <div class="mark">CLEAR</div>
-                    <div class="sub" id="stampsub">3 turns</div>
-                </div>
-
-                <div class="foot">
-                    <p id="hint">Tap the mirror to turn it.</p>
-                    <div class="ctrl">
-                        <span class="count" id="turns">Turns 0</span>
-                        <button class="btn" id="reset" type="button">Reset</button>
-                        <button class="btn solid" id="next" type="button">/Next</button>
-                    </div>
-                    <p class="keys">
-                        Tap a piece to turn it 15 degrees. Drag around a piece to turn it freely. Keys:
-                        <kbd>Space</kbd> next piece, <kbd>←</kbd> <kbd>→</kbd> turn, <kbd>Shift</kbd> for 1 degree.
-                    </p>
-
-                    <section class="notes" aria-label="How the light works">
-                        <h2>Field notes on the light</h2>
-                        <div class="grid">
-                            <div>
-                                <h3>Mirrors</h3>
-                                <p>A ray leaves at the angle it arrived, mirrored across the surface normal.</p>
-                                <span class="eq">0 out = 0 in</span>
-                            </div>
-                            <div>
-                                <h3>Prisms</h3>
-                                <p> 
-                                    Each face bends light by Snell's law. A ray inside that meets a face too steeply reflects instead.
-                                </p>
-                                <span class="eq">n₁ sin θ₁ = n₂ sin θ₂</span>
-                            </div>
-                            <div>
-                                <h3>Colour</h3>
-                                <p>
-                                    This glass has index 1.42 for red up to 1.68 for blue, so white light fans into five bands. Real flint glass spreads far less.
-                                </p>
-                                <span class="eq">n 1.42 right arrow 1.68</span>
-                            </div>
-                            <div>
-                                <h3>Lenses</h3>
-                                <p>
-                                    A thin lens tips a ray toward its axis by its height over the focal length, so a fan can meet again as white.
-                                </p>
-                                <span class="eq">triangle's slope = -h / f</span>
-                            </div>
-                </section>
-            </main>
-
-            
-            <script src="js/engine.js"></script>
-            <script src="js/levels.js"></script>
-            <script src="js/paper.js"></script>
-            <script src="js/logo.js"></script>
-            <script src="js/game.js"></script>
-    </body>
-</html>
-                
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Prism</title>
+<meta
+name="description"
+content="A light-bending puzzle with ray-traced mirrors, lenses and prisms."
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+/>
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+/>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main class="sheet">
+<header class="poster">
+<canvas
+id="logo"
+role="img"
+aria-label="PRISM logo. A white beam hits the I, a glass prism, and fans into a spectrum."
+></canvas>
+<p class="tag">A light-bending puzzle</p>
+</header>
